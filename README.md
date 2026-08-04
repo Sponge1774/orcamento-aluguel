@@ -52,25 +52,42 @@ orcamento_aluguel/
 - **`Apartamento`**, **`Casa`**, **`Estudio`**: herdam de `Imovel` e sobrescrevem `calcular_valor_mensal()`, cada uma com sua própria regra (polimorfismo).
 - **`Orcamento`**: recebe um `Imovel` e gera as 12 parcelas mensais, exibindo-as na tela e exportando-as para `.csv`.
 
-### Como executar
+### 🚀 Etapas de Execução do Projeto
 
-Pré-requisitos: Python 3 instalado.
+O projeto segue três etapas, na seguinte ordem: primeiro o código-fonte, depois a geração do orçamento (.csv) a partir dele e, por fim, a geração do fluxograma que documenta a lógica da aplicação.
+
+**Etapa 1 — Código-fonte: `orcamento_aluguel.py`**
+
+Este é o arquivo principal do projeto, contendo as classes (`Imovel`, `Apartamento`, `Casa`, `Estudio`, `Orcamento`) e toda a lógica de cálculo do orçamento de aluguel.
+
+- **Softwares utilizados:** Python 3 (`sudo apt install python3 python3-pip python3-venv`) e Visual Studio Code como editor de código (`code .`).
+
+**Etapa 2 — Geração do `orcamento_aluguel.csv` a partir do código**
+
+Com o `orcamento_aluguel.py` pronto, ele é executado no terminal:
 
 ```bash
 python3 orcamento_aluguel.py
 ```
 
-Siga as instruções exibidas no terminal (tipo de imóvel, quartos, garagem, filhos/vagas, número de parcelas do contrato). Ao final, o arquivo `orcamento_aluguel.csv` será gerado na mesma pasta.
+O programa solicita os dados do imóvel (tipo, quartos, garagem, filhos/vagas de estacionamento, número de parcelas do contrato) e, ao final da execução, **gera automaticamente** o arquivo `orcamento_aluguel.csv` na mesma pasta, contendo as 12 parcelas do orçamento anual.
 
-### Como gerar o fluxograma
+- **Softwares utilizados:** Python 3 (execução do script) e, opcionalmente, LibreOffice Calc para abrir e conferir o conteúdo do arquivo gerado:
+  ```bash
+  libreoffice --calc orcamento_aluguel.csv
+  ```
 
-Pré-requisitos: Python 3, biblioteca `graphviz` (`pip install graphviz`) e o software Graphviz instalado no sistema (`sudo apt install graphviz` no Linux).
+**Etapa 3 — Geração do `fluxograma_orcamento.png`**
+
+Por fim, o fluxograma da aplicação (parte teórica do trabalho) é gerado a partir de um script separado, `flowchart.py`, que usa a biblioteca Graphviz para desenhar o diagrama.
 
 ```bash
 python3 flowchart.py
 ```
 
-Isso gera o arquivo `fluxograma_orcamento.png`.
+Isso cria o arquivo `fluxograma_orcamento.png` na mesma pasta.
+
+- **Softwares utilizados:** Python 3, o software Graphviz instalado no sistema (`sudo apt install graphviz` no Linux) e a biblioteca Python correspondente (`pip install graphviz --break-system-packages`).
 
 ### Licença
 
@@ -127,25 +144,42 @@ orcamento_aluguel/
 
 > Note: class and method names remain in Portuguese in the source code, matching the original assignment language. This section simply explains their purpose in English.
 
-### How to run
+### 🚀 Project Execution Steps
 
-Requirements: Python 3 installed.
+The project follows three steps, in this order: first the source code, then generating the budget (.csv) from it, and finally generating the flowchart that documents the application's logic.
+
+**Step 1 — Source code: `orcamento_aluguel.py`**
+
+This is the project's main file, containing the classes (`Imovel`, `Apartamento`, `Casa`, `Estudio`, `Orcamento`) and all the rental budget calculation logic.
+
+- **Software used:** Python 3 (`sudo apt install python3 python3-pip python3-venv`) and Visual Studio Code as the code editor (`code .`).
+
+**Step 2 — Generating `orcamento_aluguel.csv` from the code**
+
+With `orcamento_aluguel.py` ready, it is run in the terminal:
 
 ```bash
 python3 orcamento_aluguel.py
 ```
 
-Follow the prompts shown in the terminal (property type, bedrooms, garage, children/parking spots, number of contract installments). At the end, the `orcamento_aluguel.csv` file will be generated in the same folder.
+The program asks for the property details (type, bedrooms, garage, children/parking spots, number of contract installments) and, at the end of execution, **automatically generates** the `orcamento_aluguel.csv` file in the same folder, containing the 12 installments of the annual budget.
 
-### How to generate the flowchart
+- **Software used:** Python 3 (running the script) and, optionally, LibreOffice Calc to open and check the generated file's contents:
+  ```bash
+  libreoffice --calc orcamento_aluguel.csv
+  ```
 
-Requirements: Python 3, the `graphviz` library (`pip install graphviz`), and the Graphviz software installed on your system (`sudo apt install graphviz` on Linux).
+**Step 3 — Generating `fluxograma_orcamento.png`**
+
+Finally, the application's flowchart (the theoretical part of the assignment) is generated from a separate script, `flowchart.py`, which uses the Graphviz library to draw the diagram.
 
 ```bash
 python3 flowchart.py
 ```
 
-This generates the `fluxograma_orcamento.png` file.
+This creates the `fluxograma_orcamento.png` file in the same folder.
+
+- **Software used:** Python 3, the Graphviz software installed on the system (`sudo apt install graphviz` on Linux), and the corresponding Python library (`pip install graphviz --break-system-packages`).
 
 ### License
 
